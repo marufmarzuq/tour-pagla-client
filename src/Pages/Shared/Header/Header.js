@@ -31,9 +31,11 @@ const Header = () => {
                                         <Dropdown.Item as={Link} to="/my-booking" eventKey="2">My Booking</Dropdown.Item>
                                         <Dropdown.Item eventKey="3">Settings</Dropdown.Item>
                                         <Dropdown.Divider />
-                                        <Dropdown.Item onClick={logOut} eventKey="4">Log Out</Dropdown.Item>
+                                        <Dropdown.Item onClick={logOut} eventKey="4">
+                                             <i className="fas fa-sign-out-alt"></i> Log Out
+                                        </Dropdown.Item>
                                    </DropdownButton>
-                                   : <Link to="/login" className='btn btn-primary'>Login</Link>}
+                                   : <Link to="/login" className='btn btn-primary'><i className="fas fa-sign-in-alt"></i> Login</Link>}
                          </Nav>
                     </Navbar.Collapse>
                </Container>

@@ -6,8 +6,8 @@ import banner3 from '../../../Images/banner-3.png'
 
 const Cover = () => {
      return (
-          <section>
-               <Carousel fade>
+          <section id="cover">
+               <Carousel fade indicators={false}>
                     <Carousel.Item className="h-100">
                          <div className="overlay"></div>
                          <img
@@ -16,10 +16,9 @@ const Cover = () => {
                               alt="First slide"
                          />
                          <Carousel.Caption>
-                              <div className="container">
-                              <h3>First slide label</h3>
-                              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                              </div>
+                         <h3 className="display-2 fw-bold">Amazing Tour In Hampshire</h3>
+                              <h3>7 days / 8 night tour</h3>
+                              <button className="btn btn-primary">Book Now</button>
                          </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item className="h-100">
@@ -30,8 +29,9 @@ const Cover = () => {
                               alt="Second slide"
                          />
                          <Carousel.Caption>
-                              <h3>Second slide label</h3>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                              <h3 className="display-2 fw-bold">Amazing Tour In madagascar</h3>
+                              <h3>7 days / 8 night tour</h3>
+                              <button className="btn btn-primary">Book Now</button>
                          </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item className="h-100">
@@ -42,8 +42,9 @@ const Cover = () => {
                               alt="Third slide"
                          />
                          <Carousel.Caption>
-                              <h3>Third slide label</h3>
-                              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                              <h3 className="display-2 fw-bold">Amazing Tour In Indonesia </h3>
+                              <h3>7 days / 8 night tour</h3>
+                              <button className="btn btn-primary">Book Now</button>
                          </Carousel.Caption>
                     </Carousel.Item>
                </Carousel>

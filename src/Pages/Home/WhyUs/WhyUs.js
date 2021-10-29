@@ -7,9 +7,9 @@ import whyUs4 from '../../../Images/traveller.png'
 const WhyUs = () => {
      return (
           <div>
-               <section id="why-us">
+               <section id="why-us" className="py-5 my-3">
                     <div className="container bg-silver text-center my-5">
-                         <div className="row">
+                         <div className="row pb-3">
                               <p>Why TourPagla</p>
                               <h2 className="pb-4 fw-bold">Why You Are Travel With TourPagla</h2>
                          </div>
