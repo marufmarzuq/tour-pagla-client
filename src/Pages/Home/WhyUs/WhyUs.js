@@ -8,8 +8,12 @@ const WhyUs = () => {
      return (
           <div>
                <section id="why-us">
-                    <div className="container bg-silver text-center text-white my-5">
-                         <div className="row row-cols-1 row-cols-md-4 g-4 ">
+                    <div className="container bg-silver text-center my-5">
+                         <div className="row">
+                              <p>Why TourPagla</p>
+                              <h2 className="pb-4 fw-bold">Why You Are Travel With TourPagla</h2>
+                         </div>
+                         <div className="row row-cols-1 row-cols-md-4 g-4 text-white">
                               <div className="col">
                                    <div className="card h-100 bg-mycolor">
                                         <img src={ whyUs1 } className="card-img-top" alt="..."/>
