@@ -1,0 +1,14 @@
+img.logo {
+     max-width: 200px;
+     padding-bottom: 5px;
+}
+.nav-user .btn-primary {
+     background-color: transparent !important;
+     border: none;
+     outline: none !important;
+     box-shadow: none !important;
+ }
+ .nav-user a {
+      color:  #212529;
+      text-decoration: none;
+ }
