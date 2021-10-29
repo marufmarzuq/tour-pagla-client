@@ -1,8 +1,9 @@
 import React from 'react';
 import Rating from 'react-rating';
+import { Link } from 'react-router-dom';
 
 const Tour = ({ tour }) => {
-     const { tour_name, rating, price, imgURL, duration } = tour;
+     const { tour_name, rating, price, imgURL, duration, _id } = tour;
      console.log(tour)
      return (
           <>
@@ -15,7 +16,9 @@ const Tour = ({ tour }) => {
                                    <span><i className="fas fa-calendar-alt"></i> {duration}</span>
                                    <span className="fw-bolder fs-5">${price}</span></div>
                               <div className="d-flex justify-content-between align-items-center mt-2">
+                                   <Link to={`/booking/${_id}`}>
                                    <button className="btn btn-primary"><i className="fas fa-location-arrow"></i> Book Now</button>
+                                   </Link>
                                    <Rating
                                         className="rating"
                                         initialRating={rating}

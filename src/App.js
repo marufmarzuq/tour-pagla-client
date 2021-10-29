@@ -9,6 +9,8 @@ import MyBooking from './Pages/MyBooking/MyBooking';
 import Login from './Pages/Login/Login';
 import AuthProvider from './Context/AuthProvider/AuthProvider';
 import ScrollToTop from './ScrollTop/ScrollToTop';
+import Booking from './Pages/Booking/Booking';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -21,18 +23,21 @@ function App() {
             <Route exact path="/">
               <Home></Home>
             </Route>
-            <Route path="/control-all-booking">
+            <PrivateRoute path="/control-all-booking">
               <ControlAllBooking></ControlAllBooking>
-            </Route>
-            <Route path="/add-plan">
+            </PrivateRoute>
+            <PrivateRoute path="/add-plan">
               <AddPlan></AddPlan>
-            </Route>
-            <Route path="/my-booking">
+            </PrivateRoute>
+            <PrivateRoute path="/my-booking">
               <MyBooking></MyBooking>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>
+            <PrivateRoute path="/booking/:id">
+              <Booking></Booking>
+            </PrivateRoute>
           </Switch>
           <Footer></Footer>
         </BrowserRouter>
