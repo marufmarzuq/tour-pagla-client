@@ -15,13 +15,12 @@ const Booking = () => {
           .then(result=> setTour(result))
      }, [])
      const { tour_name, imgURL, price, rating, duration } = tour;
-     const { register, handleSubmit, formState: { errors } } = useForm();
+     const { register, handleSubmit, reset, formState: { errors } } = useForm();
      const onSubmit = data => {
           data.tour_name = tour_name;
           data.tourImg = imgURL;
           data.price = price;
-          console.log(data)
-
+          
           fetch('http://localhost:5000/all-booking', {
                method: 'POST',
                headers: {
@@ -30,7 +29,12 @@ const Booking = () => {
                body: JSON.stringify(data)
           })
                .then(res => res.json())
-               .then(result => console.log(result));
+               .then(result => {
+                    if(result.insertedId) {
+                         alert('Booking submit successfully')
+                    }
+                    reset();
+               });
      };
      return (
           <main id="booking" className="py-5">
