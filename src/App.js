@@ -11,6 +11,7 @@ import AuthProvider from './Context/AuthProvider/AuthProvider';
 import ScrollToTop from './ScrollTop/ScrollToTop';
 import Booking from './Pages/Booking/Booking';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import UserProfile from './Pages/UserProfile/UserProfile';
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
             </Route>
             <PrivateRoute path="/booking/:id">
               <Booking></Booking>
+            </PrivateRoute>
+            <PrivateRoute path="/profile">
+              <UserProfile></UserProfile>
             </PrivateRoute>
           </Switch>
           <Footer></Footer>

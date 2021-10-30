@@ -18,7 +18,7 @@ const Header = () => {
                          <Nav className="ms-auto">
                               {
                                    user?.email &&
-                                   <Nav.Link as={Link} to="/control-all-booking"><i class="far fa-edit"></i> Control All Booking</Nav.Link>
+                                   <Nav.Link as={Link} to="/control-all-booking">Control All Booking</Nav.Link>
                               }
                               {
                                    user?.email &&
@@ -26,8 +26,8 @@ const Header = () => {
                               }
 
                               {user?.email ?
-                                   <DropdownButton className="nav-user" align="end" title={ user.displayName } id="dropdown-menu-align-end">
-                                        <Dropdown.Item eventKey="1"><i class="far fa-user-circle"></i> Profile</Dropdown.Item>
+                                   <DropdownButton className="nav-user" align="end" title={user.displayName} id="dropdown-menu-align-end">
+                                        <Dropdown.Item as={Link} to="/profile" eventKey="1"><i class="far fa-user-circle"></i> Profile</Dropdown.Item>
                                         <Dropdown.Item as={Link} to="/my-booking" eventKey="2"><i class="fas fa-bookmark"></i> My Booking</Dropdown.Item>
                                         <Dropdown.Item eventKey="3"><i class="fas fa-cog"></i> Settings</Dropdown.Item>
                                         <Dropdown.Divider />

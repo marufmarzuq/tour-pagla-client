@@ -5,13 +5,15 @@ import MySingleBooking from './MySignleBooking/MySingleBooking';
 const MyBooking = () => {
      const [myBooking, setMyBooking] = useState([])
      const [control, setControl] = useState(false);
-     const { user } = useAuth();
+     const { user} = useAuth();
      useEffect(() => {
           fetch(`https://mighty-beyond-61990.herokuapp.com/all-booking/${user.email}`)
                .then(res => res.json())
-          .then(result=> setMyBooking(result))
+               .then(result => {
+                    setMyBooking(result)
+               }
+               )
      }, [control])
-     console.log(myBooking.length);
      return (
           <main id="all-booking" className="my-5">
                <div className="container">
