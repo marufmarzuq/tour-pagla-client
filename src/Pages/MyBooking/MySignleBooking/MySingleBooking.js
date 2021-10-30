@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const MySingleBooking = ({ booking, setControl, control }) => {
-     const { date, price, tourImg, tour_name, ticket_type, adult, child, _id } = booking;
+     const { date, price, tourImg, tour_name, ticket_type, adult, child, _id, status } = booking;
      const handleDeleteBooking = (id) => {
           fetch(`http://localhost:5000/all-booking/${id}`, {
                method: 'DELETE'
@@ -31,7 +31,7 @@ const MySingleBooking = ({ booking, setControl, control }) => {
                          <div class="card-text">Cost: ${ price }</div>
                          <span class="card-text"><small class="text-muted">Booked time: {date}</small></span>
                          <div>
-                              <p className="w-50">Pending</p>          
+                                        <p className="w-50">{status? 'aproved':'pending' }</p>
                               <button onClick={ () => handleDeleteBooking(_id) } className="btn btn-danger w-50">Cancel</button>          
                          </div>
                     </div>

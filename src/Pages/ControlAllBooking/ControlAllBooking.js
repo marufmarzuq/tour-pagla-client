@@ -9,6 +9,7 @@ const ControlAllBooking = () => {
                .then(res => res.json())
           .then(result=> setAllBooking(result))
      }, [control])
+     console.log(allBooking)
      return (
           <main id="all-booking" className="my-5">
                <div className="container">

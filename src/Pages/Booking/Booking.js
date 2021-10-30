@@ -20,6 +20,7 @@ const Booking = () => {
           data.tour_name = tour_name;
           data.tourImg = imgURL;
           data.price = price;
+          data.status = false;
           
           fetch('http://localhost:5000/all-booking', {
                method: 'POST',

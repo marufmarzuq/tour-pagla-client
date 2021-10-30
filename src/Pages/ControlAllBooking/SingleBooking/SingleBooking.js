@@ -1,6 +1,25 @@
 import React from 'react';
 
 const SingleBooking = ({ booking, setControl, control }) => {
+     const { date, name, price, tourImg, tour_name, _id, status } = booking;
+     const handleUpdateBooking = id => {
+          booking.status = true;
+          fetch(`http://localhost:5000/all-booking/${id}`, {
+               method: 'PUT',
+               headers: {
+                    'content-type': 'application/json'
+               },
+               body:JSON.stringify(booking)
+          })
+               .then(res => res.json())
+               .then(data => {
+                    if (data.modifiedCount) {
+                         setControl(!control);
+                       } else {
+                         setControl(false);
+                       }
+               })
+     }
      const handleDeleteBooking = (id) => {
           fetch(`http://localhost:5000/all-booking/${id}`, {
                method: 'DELETE'
@@ -15,7 +34,6 @@ const SingleBooking = ({ booking, setControl, control }) => {
                        }
                })
      }
-     const { date, name, price, tourImg, tour_name, _id } = booking;
      return (
           <div className="col">
                <div class="card mb-3" style={{"maxWidth": "540"}}>
@@ -29,9 +47,17 @@ const SingleBooking = ({ booking, setControl, control }) => {
                          <div class="card-text">Cost: ${ price }</div>
                          <div class="card-text">Booked by { name }</div>
                          <span class="card-text"><small class="text-muted">Booked time: {date}</small></span>
-                         <div>
-                              <button className="btn btn-outline-dark w-50">Approve</button>          
-                              <button onClick={ () => handleDeleteBooking(_id) } className="btn btn-danger w-50">Remove</button>          
+                                   <div>
+                                        {
+                                             status? <div className="w-50 d-inline-block">Approved</div>:<button
+                                   className="btn btn-outline-dark w-50"
+                                   onClick={() => handleUpdateBooking(_id)}
+                              >Approve</button>
+                                        }
+                              <button
+                                   onClick={() => handleDeleteBooking(_id)}
+                                   className="btn btn-danger w-50"
+                              >Remove</button>
                          </div>
                     </div>
                </div>
