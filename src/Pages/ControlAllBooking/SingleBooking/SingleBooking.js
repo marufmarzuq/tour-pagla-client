@@ -50,17 +50,17 @@ const SingleBooking = ({ booking, setControl, control }) => {
                          <div className="card-text">Cost: ${ price }</div>
                          <div className="card-text">Booked by { name }</div>
                          <span className="card-text"><small className="text-muted">Booked time: {date}</small></span>
-                                   <div>
+                                   <div className="d-flex justify-content-between align-items-center">
                                         {
-                                             status? <div className="w-50 d-inline-block">Approved</div>:<button
-                                   className="btn btn-outline-dark w-50"
+                                             status? <div className="booking-status my-color d-inline-block">Approved</div>:<button
+                                   className="btn my-bg-color booking-btn"
                                    onClick={() => handleUpdateBooking(_id)}
-                              >Approve</button>
+                              ><i class="far fa-check-circle"></i> Approve</button>
                                         }
                               <button
                                    onClick={() => handleDeleteBooking(_id)}
-                                   className="btn btn-danger w-50"
-                              >Remove</button>
+                                   className="btn btn-danger booking-btn-2"
+                              ><i class="far fa-trash-alt"></i> Remove</button>
                          </div>
                     </div>
                </div>

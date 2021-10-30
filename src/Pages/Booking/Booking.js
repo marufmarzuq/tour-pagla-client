@@ -85,7 +85,7 @@ const Booking = () => {
                                    </select>
                                    <input type="date" placeholder="date" {...register("date", {required: true})} />
                                    <textarea className="booking-message" placeholder="Message..." {...register("message", {})} />
-                                   <input className="booking-submit" type="submit" />
+                                   <input className="booking-submit my-bg-color" type="submit" />
                               </form>
                          </div>
                     </div>

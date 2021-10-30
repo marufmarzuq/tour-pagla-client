@@ -35,9 +35,10 @@ const MySingleBooking = ({ booking, setControl, control }) => {
                               <div className="card-text">Adult: {adult ? adult: "0"} Child: { child ? child: "0" }</div>
                          <div className="card-text">Cost: ${ price }</div>
                          <span className="card-text"><small className="text-muted">Booked time: {date}</small></span>
-                         <div>
-                                        <p className="w-50">{status? 'aproved':'pending' }</p>
-                              <button onClick={ () => handleDeleteBooking(_id) } className="btn btn-danger w-50">Cancel</button>          
+                         <div className="d-flex justify-content-between align-items-center">
+                                        {status ? <span className="my-color">Aproved</span> :
+                                        <span className="text-danger">Pending</span>}
+                              <button onClick={ () => handleDeleteBooking(_id) } className="btn btn-danger booking-btn">Cancel</button>
                          </div>
                     </div>
                </div>

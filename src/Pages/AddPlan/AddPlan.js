@@ -60,9 +60,9 @@ const AddBooking = () => {
                               <option value="5">5</option>
                               </select>
                               <input type="url" placeholder="imgURL" {...register("imgURL", {required: true})} />
-                              <input className="booking-submit" type="submit" />
+                              <input className="booking-submit my-bg-color" type="submit" />
                          </form>
-                         <button onClick={handleDeleteAllNewTours} className="btn btn-danger w-100">Delete Extra Tour Packages</button>
+                         <button onClick={handleDeleteAllNewTours} className="btn btn-danger w-100"><i class="far fa-trash-alt"></i> Delete Extra Tour Packages</button>
                     </div>
                </div>
           </main>

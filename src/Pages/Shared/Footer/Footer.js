@@ -10,33 +10,31 @@ const Footer = () => {
                     <div className="footer-body">
                          <div className="row row-cols-1 row-cols-md-4 g-4 py-5">
                               <div className="col">
-                                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, excepturi. Nostrum et quaerat deserunt, temporibus sequi delectus quibusdam veritatis quam.</p>
-                                   <img src={ logo } className="w-100" alt="" />
+                                   <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                                   <img src={ logo } className="w-100 footer-logo" alt="" />
                               </div>
                               <div className="col">
                                    <h4 className="text-white">Contact Us</h4>
-                                   <ul>
-                                        <li>+01852-1265122 <br />
-                                             +01852-1265122</li>
-                                        <li>info@example.com <br />
-                                             support@example.com</li>
-                                        <li>2752 Willison Street <br />
-                                             Eagan, United State</li>
-                                   </ul>
+                                   <div>
+                                        <a href="/">+01852-1265122</a>
+                                        <a href="/">+01852-1265122</a>
+                                        <a href="/">info@example.com</a>
+                                        <a href="/">support@example.com</a>
+                                        <div>2752 Willison Street, Eagan</div>
+                                   </div>
                               </div>
                               <div className="col">
                                    <h4 className="text-white">Contact Us</h4>
-                                   <ul>
-                                        <li>Contact Us</li>
-                                        <li>About Us</li>
-                                        <li>Destinations</li>
-                                        <li>Our Blogs</li>
-                                        <li>Package</li>
-                                   </ul>
+                                   <div>
+                                        <a href="/">Contact Us</a>
+                                        <a href="/">About Us</a>
+                                        <a href="/">Destinations</a>
+                                        <a href="/">Our Blogs</a>
+                                        <a href="/">Package</a>
+                                   </div>
                               </div>
                               <div className="col">
                                    <h4 className="text-white">Pay Safely</h4>
-                                   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, quasi.</p>
                                    <img src={ paymentImg } alt="" />
                               </div>
                          </div>
