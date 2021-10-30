@@ -15,7 +15,7 @@ const WhyUs = () => {
                          </div>
                          <div className="row row-cols-1 row-cols-md-4 g-4 text-white">
                               <div className="col">
-                                   <div className="card h-100 bg-mycolor">
+                                   <div className="card h-100 my-bg-color">
                                         <img src={ whyUs1 } className="card-img-top" alt="..."/>
                                         <div className="card-body">
                                              <h5 className="card-title">2000+ Our worldwide guide</h5>
@@ -23,7 +23,7 @@ const WhyUs = () => {
                                    </div>
                               </div>
                               <div className="col">
-                                   <div className="card h-100 bg-mycolor">
+                                   <div className="card h-100 my-bg-color">
                                         <img src={ whyUs2 } className="card-img-top" alt="..."/>
                                         <div className="card-body">
                                              <h5 className="card-title">100% trusted travel agency</h5>
@@ -31,7 +31,7 @@ const WhyUs = () => {
                                    </div>
                               </div>
                               <div className="col">
-                                   <div className="card h-100 bg-mycolor">
+                                   <div className="card h-100 my-bg-color">
                                         <img src={ whyUs3 } className="card-img-top" alt="..."/>
                                         <div className="card-body">
                                              <h5 className="card-title">10+ year of travel experience</h5>
@@ -39,7 +39,7 @@ const WhyUs = () => {
                                    </div>
                               </div>
                               <div className="col">
-                                   <div className="card h-100 bg-mycolor">
+                                   <div className="card h-100 my-bg-color">
                                         <img src={ whyUs4 } className="card-img-top" alt="..."/>
                                         <div className="card-body">
                                              <h5 className="card-title">90% of our traveller happy</h5>

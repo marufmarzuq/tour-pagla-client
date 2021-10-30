@@ -29,7 +29,7 @@
     position: absolute;
     right: 15%;
     top: 50%;
-    left: 10%;
+    left: 12%;
     transform: translate(0, -50%);
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
@@ -55,4 +55,7 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     overflow: hidden;
+}
+.carousel-control-next, .carousel-control-prev {
+    width: 12% !important;
 }

@@ -5,6 +5,15 @@ import banner2 from '../../../Images/banner-2.png'
 import banner3 from '../../../Images/banner-3.png'
 
 const Cover = () => {
+     const handleTourBtn = (e) => {
+          e.preventDefault();
+          const target = e.target.getAttribute('href');
+          const location = document.querySelector(target).offsetTop;
+          window.scrollTo({
+               left: 0,
+               top: location - 80,
+          })
+     }
      return (
           <section id="cover">
                <Carousel fade indicators={false}>
@@ -18,7 +27,7 @@ const Cover = () => {
                          <Carousel.Caption>
                          <h3 className="display-2 fw-bold">Amazing Tour In Hampshire</h3>
                               <h3>7 days / 8 night tour</h3>
-                              <button className="btn btn-primary">Book Now</button>
+                              <a href="#tours-section" onClick={handleTourBtn} className="btn btn-light px-4 py-2">Book Now</a>
                          </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item className="h-100">
@@ -31,7 +40,7 @@ const Cover = () => {
                          <Carousel.Caption>
                               <h3 className="display-2 fw-bold">Amazing Tour In madagascar</h3>
                               <h3>7 days / 8 night tour</h3>
-                              <button className="btn btn-primary">Book Now</button>
+                              <a href="#tours-section" onClick={handleTourBtn} className="btn btn-light px-4 py-2">Book Now</a>
                          </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item className="h-100">
@@ -44,7 +53,7 @@ const Cover = () => {
                          <Carousel.Caption>
                               <h3 className="display-2 fw-bold">Amazing Tour In Indonesia </h3>
                               <h3>7 days / 8 night tour</h3>
-                              <button className="btn btn-primary">Book Now</button>
+                              <a href="#tours-section" onClick={handleTourBtn} className="btn btn-light px-4 py-2">Book Now</a>
                          </Carousel.Caption>
                     </Carousel.Item>
                </Carousel>

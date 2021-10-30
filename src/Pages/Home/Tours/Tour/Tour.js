@@ -16,7 +16,7 @@ const Tour = ({ tour }) => {
                                    <span className="fw-bolder fs-5">${price}</span></div>
                               <div className="d-flex justify-content-between align-items-center mt-2">
                                    <Link to={`/booking/${_id}`}>
-                                   <button className="btn btn-primary"><i className="fas fa-location-arrow"></i> Book Now</button>
+                                   <button className="btn my-bg-color"><i className="fas fa-location-arrow"></i> Book Now</button>
                                    </Link>
                                    <Rating
                                         className="rating"

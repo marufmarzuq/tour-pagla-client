@@ -9,7 +9,7 @@ const Tours = () => {
                .then(result => setTours(result))
      }, [])
      return (
-          <section className="tours">
+          <section className="tours" id="tours-section">
                <div className="container my-5">
                     <div className="row text-center pb-3">
                          <p>Hot Packages</p>
