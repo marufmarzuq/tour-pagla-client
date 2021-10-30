@@ -15,7 +15,7 @@ const MyBooking = () => {
           <main id="all-booking" className="my-5">
                <div className="container">
                     <h1>My Booking</h1>
-                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div className="row row-cols-1 row-cols-md-2 g-4">
                          {
                               myBooking.slice(0).reverse().map(booking => <MySingleBooking
                                    key={booking._id}

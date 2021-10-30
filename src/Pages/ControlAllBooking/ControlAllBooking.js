@@ -9,12 +9,11 @@ const ControlAllBooking = () => {
                .then(res => res.json())
           .then(result=> setAllBooking(result))
      }, [control])
-     console.log(allBooking)
      return (
           <main id="all-booking" className="my-5">
                <div className="container">
                     <h1>Controll All Booking</h1>
-                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div className="row row-cols-1 row-cols-md-2 g-4">
                          {
                               allBooking.slice(0).reverse().map(booking => <SingleBooking
                                    key={booking._id}

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 const Tour = ({ tour }) => {
      const { tour_name, rating, price, imgURL, duration, _id } = tour;
-     console.log(tour)
      return (
           <>
                <div className="col">
