@@ -6,7 +6,7 @@ const MySingleBooking = ({ booking, setControl, control }) => {
           const confirmMessage = "Are you sure, you want to cancel the booking?"
           if (window.confirm(confirmMessage)) {
                //eslint-disable-line
-               fetch(`http://localhost:5000/all-booking/${id}`, {
+               fetch(`https://mighty-beyond-61990.herokuapp.com/all-booking/${id}`, {
                     method: 'DELETE'
                })
                     .then(res => res.json())

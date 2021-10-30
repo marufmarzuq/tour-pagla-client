@@ -4,7 +4,7 @@ const SingleBooking = ({ booking, setControl, control }) => {
      const { date, name, price, tourImg, tour_name, _id, status } = booking;
      const handleUpdateBooking = id => {
           booking.status = true;
-          fetch(`http://localhost:5000/all-booking/${id}`, {
+          fetch(`https://mighty-beyond-61990.herokuapp.com/all-booking/${id}`, {
                method: 'PUT',
                headers: {
                     'content-type': 'application/json'
@@ -24,7 +24,7 @@ const SingleBooking = ({ booking, setControl, control }) => {
           const confirmMessage = "Are you sure, you want to remove the booking?"
           if (window.confirm(confirmMessage)) {
                //eslint-disable-line
-               fetch(`http://localhost:5000/all-booking/${id}`, {
+               fetch(`https://mighty-beyond-61990.herokuapp.com/all-booking/${id}`, {
                     method: 'DELETE'
                })
                     .then(res => res.json())

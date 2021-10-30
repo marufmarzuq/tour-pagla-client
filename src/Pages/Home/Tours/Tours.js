@@ -4,7 +4,7 @@ import Tour from './Tour/Tour';
 const Tours = () => {
      const [tours, setTours] = useState([])
      useEffect(() => {
-          fetch("http://localhost:5000/tours")
+          fetch("https://mighty-beyond-61990.herokuapp.com/tours")
                .then(res => res.json())
                .then(result => setTours(result))
      }, [])

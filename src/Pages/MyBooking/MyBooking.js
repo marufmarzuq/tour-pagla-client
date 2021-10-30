@@ -7,7 +7,7 @@ const MyBooking = () => {
      const [control, setControl] = useState(false);
      const { user } = useAuth();
      useEffect(() => {
-          fetch(`http://localhost:5000/all-booking/${user.email}`)
+          fetch(`https://mighty-beyond-61990.herokuapp.com/all-booking/${user.email}`)
                .then(res => res.json())
           .then(result=> setMyBooking(result))
      }, [control])

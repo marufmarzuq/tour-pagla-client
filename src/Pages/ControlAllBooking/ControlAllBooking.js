@@ -5,7 +5,7 @@ const ControlAllBooking = () => {
      const [allBooking, setAllBooking] = useState([])
      const [control, setControl] = useState(false);
      useEffect(() => {
-          fetch('http://localhost:5000/all-booking')
+          fetch('https://mighty-beyond-61990.herokuapp.com/all-booking')
                .then(res => res.json())
           .then(result=> setAllBooking(result))
      }, [control])

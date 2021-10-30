@@ -7,7 +7,7 @@ const AddBooking = () => {
      const onSubmit = data => {
           data.status = false;
           data.new_added = "yes";
-          fetch('http://localhost:5000/tours', {
+          fetch('https://mighty-beyond-61990.herokuapp.com/tours', {
                method: 'POST',
                headers: {
                     'content-type': 'application/json'
@@ -26,7 +26,7 @@ const AddBooking = () => {
           const confirmMessage = "Are you sure, you want to delete all the new tour packages?"
           if (window.confirm(confirmMessage)) {
                //eslint-disable-line
-               fetch('http://localhost:5000/tours', {
+               fetch('https://mighty-beyond-61990.herokuapp.com/tours', {
                     method: 'DELETE'
                })
                     .then(res => res.json())

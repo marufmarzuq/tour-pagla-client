@@ -10,7 +10,7 @@ const Booking = () => {
      const { id } = useParams('id');
      const { user } = useAuth();
      useEffect(() => {
-          fetch(`http://localhost:5000/tours/${id}`)
+          fetch(`https://mighty-beyond-61990.herokuapp.com/tours/${id}`)
                .then(res => res.json())
           .then(result=> setTour(result))
      }, [])
@@ -22,7 +22,7 @@ const Booking = () => {
           data.price = price;
           data.status = false;
           
-          fetch('http://localhost:5000/all-booking', {
+          fetch('https://mighty-beyond-61990.herokuapp.com/all-booking', {
                method: 'POST',
                headers: {
                     'content-type': 'application/json'
