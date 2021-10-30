@@ -3,18 +3,23 @@ import React, { useState } from 'react';
 const MySingleBooking = ({ booking, setControl, control }) => {
      const { date, price, tourImg, tour_name, ticket_type, adult, child, _id, status } = booking;
      const handleDeleteBooking = (id) => {
-          fetch(`http://localhost:5000/all-booking/${id}`, {
-               method: 'DELETE'
-          })
-               .then(res => res.json())
-               .then(data => {
-                    alert("Are you sure, you want to cancel?")
-                    if (data.deletedCount) {
-                         setControl(!control);
-                       } else {
-                         setControl(false);
-                       }
+          const confirmMessage = "Are you sure, you want to cancel the booking?"
+          if (window.confirm(confirmMessage)) {
+               //eslint-disable-line
+               fetch(`http://localhost:5000/all-booking/${id}`, {
+                    method: 'DELETE'
                })
+                    .then(res => res.json())
+                    .then(data => {
+                         if (data.deletedCount) {
+                              setControl(!control);
+                            } else {
+                              setControl(false);
+                            }
+               })
+          }
+
+
      }
      return (
           <div className="col">

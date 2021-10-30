@@ -3,16 +3,46 @@ import './AddPlan.css'
 import { useForm } from 'react-hook-form';
 
 const AddBooking = () => {
-     const { register, handleSubmit, formState: { errors } } = useForm();
-     const onSubmit = data => console.log(data);
+     const { register, handleSubmit, reset, formState: { errors } } = useForm();
+     const onSubmit = data => {
+          data.status = false;
+          data.new_added = "yes";
+          fetch('http://localhost:5000/tours', {
+               method: 'POST',
+               headers: {
+                    'content-type': 'application/json'
+               },
+               body: JSON.stringify(data)
+          })
+               .then(res => res.json())
+               .then(result => {
+                    if(result.insertedId) {
+                         alert('Tour Package added')
+                    }
+                    reset();
+               });
+     };
+     const handleDeleteAllNewTours = () => {
+          const confirmMessage = "Are you sure, you want to delete all the new tour packages?"
+          if (window.confirm(confirmMessage)) {
+               //eslint-disable-line
+               fetch('http://localhost:5000/tours', {
+                    method: 'DELETE'
+               })
+                    .then(res => res.json())
+                    .then(data => {
+                         console.log(data)
+                    })
+          }
+     }
      console.log(errors);
      return (
           <main className="my-5">
                <div className="container">
                     <div className="add-tour-form-container">
                          <form onSubmit={handleSubmit(onSubmit)}>
-                              <input type="text" placeholder="tour_name" {...register("tour_name", {required: true, maxLength: 80})} />
-                              <input type="number" placeholder="price" {...register("price", {required: true, min: 100, maxLength: 100000})} />
+                              <input type="text" placeholder="Tour Name e.g. 'Super Maldives Trip'" {...register("tour_name", {required: true, maxLength: 80})} />
+                              <input type="number" placeholder="Price '100-100000'" {...register("price", {required: true, min: 100, maxLength: 100000})} />
                               <select {...register("duration", { required: true })}>
                               <option value="duration">duration</option>
                               <option value="2 Days / 3 Nights">2 Days / 3 Nights</option>
@@ -30,8 +60,9 @@ const AddBooking = () => {
                               <option value="5">5</option>
                               </select>
                               <input type="url" placeholder="imgURL" {...register("imgURL", {required: true})} />
-                              <input type="submit" />
+                              <input className="booking-submit" type="submit" />
                          </form>
+                         <button onClick={handleDeleteAllNewTours} className="btn btn-danger w-100">Delete Extra Tour Packages</button>
                     </div>
                </div>
           </main>

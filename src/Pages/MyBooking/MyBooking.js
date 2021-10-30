@@ -11,11 +11,13 @@ const MyBooking = () => {
                .then(res => res.json())
           .then(result=> setMyBooking(result))
      }, [control])
+     console.log(myBooking.length);
      return (
           <main id="all-booking" className="my-5">
                <div className="container">
-                    <h1>My Booking</h1>
-                    <div className="row row-cols-1 row-cols-md-2 g-4">
+                    {
+                         myBooking.length ?
+                         <div className="row row-cols-1 row-cols-md-2 g-4">
                          {
                               myBooking.slice(0).reverse().map(booking => <MySingleBooking
                                    key={booking._id}
@@ -24,7 +26,10 @@ const MyBooking = () => {
                                    control={control}
                               ></MySingleBooking>)
                          }
-                    </div>
+                         </div>
+                         :
+                         <div className="display-2 text-center no-booking">You have no booking</div>
+                    }
               </div>
           </main>
      );

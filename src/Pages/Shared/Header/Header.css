@@ -16,3 +16,13 @@ img.logo {
      color: black !important;
      background-color: white !important;
  }
+ .navbar.bg-dark {
+     background: linear-gradient(rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.7)), url(../../../Images/footerbanner.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center bottom;
+     background-color: #1e2124!important;
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+ }

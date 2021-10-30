@@ -12,17 +12,21 @@ const ControlAllBooking = () => {
      return (
           <main id="all-booking" className="my-5">
                <div className="container">
-                    <h1>Controll All Booking</h1>
-                    <div className="row row-cols-1 row-cols-md-2 g-4">
-                         {
-                              allBooking.slice(0).reverse().map(booking => <SingleBooking
-                                   key={booking._id}
-                                   booking={booking}
-                                   setControl={setControl}
-                                   control={control}
-                              ></SingleBooking>)
-                         }
-                    </div>
+                    {
+                         allBooking.length ?
+                         <div className="row row-cols-1 row-cols-md-2 g-4">
+                              {
+                                   allBooking.slice(0).reverse().map(booking => <SingleBooking
+                                        key={booking._id}
+                                        booking={booking}
+                                        setControl={setControl}
+                                        control={control}
+                                   ></SingleBooking>)
+                              }
+                         </div>
+                         :
+                         <div className="display-2 text-center no-booking">There is no booking yet</div>
+                    }
               </div>
           </main>
      );

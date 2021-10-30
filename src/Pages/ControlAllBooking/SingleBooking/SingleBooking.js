@@ -21,18 +21,21 @@ const SingleBooking = ({ booking, setControl, control }) => {
                })
      }
      const handleDeleteBooking = (id) => {
-          fetch(`http://localhost:5000/all-booking/${id}`, {
-               method: 'DELETE'
-          })
-               .then(res => res.json())
-               .then(data => {
-                    alert("Are you sure, you want to cancel?")
-                    if (data.deletedCount) {
-                         setControl(!control);
-                       } else {
-                         setControl(false);
-                       }
+          const confirmMessage = "Are you sure, you want to remove the booking?"
+          if (window.confirm(confirmMessage)) {
+               //eslint-disable-line
+               fetch(`http://localhost:5000/all-booking/${id}`, {
+                    method: 'DELETE'
                })
+                    .then(res => res.json())
+                    .then(data => {
+                         if (data.deletedCount) {
+                              setControl(!control);
+                            } else {
+                              setControl(false);
+                            }
+               })
+          }
      }
      return (
           <div className="col">
