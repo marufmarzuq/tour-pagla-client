@@ -35,7 +35,7 @@ const Header = () => {
                                              <i className="fas fa-sign-out-alt"></i> Log Out
                                         </Dropdown.Item>
                                    </DropdownButton>
-                                   : <Link to="/login" className='btn btn-primary'><i className="fas fa-sign-in-alt"></i> Login</Link>}
+                                   : <Link to="/login" className='btn my-bg-color'><i className="fas fa-sign-in-alt"></i> Login</Link>}
                          </Nav>
                     </Navbar.Collapse>
                </Container>
