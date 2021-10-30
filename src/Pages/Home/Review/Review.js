@@ -8,7 +8,7 @@ const Review = () => {
                <div className="container">
                <div className="row text-center pb-5">
                          <p>Our Traveller Say</p>
-                         <h2 className="pb-4 fw-bold">What Oue Traveller Say About Us</h2>
+                         <h2 className="pb-4 fw-bold">What Our Traveller Say About Us</h2>
                     </div>
                </div>
                <div className="container">
