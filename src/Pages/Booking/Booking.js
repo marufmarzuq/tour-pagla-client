@@ -64,8 +64,8 @@ const Booking = () => {
                               <form onSubmit={handleSubmit(onSubmit)} className="booking-form">
                                    <input type="text" defaultValue={user.displayName} placeholder="name" {...register("name", {required: true, maxLength: 100})} />
                                    <input type="email" defaultValue={user.email} placeholder="email" {...register("email", {required: true, pattern: /^\S+@\S+$/i})} />
-                                   <input type="tel" placeholder="mobile-number" {...register("mobile-number", {required: true, maxLength: 12})} />
-                                   <select className="ticket-type" {...register("ticket-type", { required: true })}>
+                                   <input type="tel" placeholder="mobile-number" {...register("mobile_number", {required: true, maxLength: 12})} />
+                                   <select className="ticket-type" {...register("ticket_type", { required: true })}>
                                    <option value="">Ticket Type</option>
                                    <option value="Travel with bus">Travel with bus</option>
                                    <option value="Travel with plane">Travel with plane</option>
@@ -76,7 +76,7 @@ const Booking = () => {
                                    <option value="2">2</option>
                                    <option value="3">3</option>
                                    </select>
-                                   <select className="select-child" name="Child" {...register}>
+                                   <select className="select-child" name="Child" {...register("child", { required: false })}>
                                    <option value="">Child</option>
                                    <option value="1">1</option>
                                    <option value="2">2</option>
