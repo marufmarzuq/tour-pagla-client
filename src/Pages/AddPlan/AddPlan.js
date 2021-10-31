@@ -44,7 +44,7 @@ const AddBooking = () => {
                               <input type="text" placeholder="Tour Name e.g. 'Super Maldives Trip'" {...register("tour_name", {required: true, maxLength: 80})} />
                               <input type="number" placeholder="Price '100-100000'" {...register("price", {required: true, min: 100, maxLength: 100000})} />
                               <select {...register("duration", { required: true })}>
-                              <option value="duration">duration</option>
+                              <option value="duration">Duration</option>
                               <option value="2 Days / 3 Nights">2 Days / 3 Nights</option>
                               <option value="3 Days / 4 Nights">3 Days / 4 Nights</option>
                               <option value="4 Days / 5 Nights">4 Days / 5 Nights</option>
@@ -59,7 +59,7 @@ const AddBooking = () => {
                               <option value="4">4</option>
                               <option value="5">5</option>
                               </select>
-                              <input type="url" placeholder="imgURL" {...register("imgURL", {required: true})} />
+                              <input type="url" placeholder="Image URL" {...register("imgURL", {required: true})} />
                               <input className="booking-submit my-bg-color" type="submit" />
                          </form>
                          <button onClick={handleDeleteAllNewTours} className="btn btn-danger w-100"><i class="far fa-trash-alt"></i> Delete Extra Tour Packages</button>

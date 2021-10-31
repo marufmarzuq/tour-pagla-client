@@ -1,13 +1,14 @@
 import React from 'react';
 import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
+import './Tour.css'
 
 const Tour = ({ tour }) => {
      const { tour_name, rating, price, imgURL, duration, _id } = tour;
      return (
           <>
                <div className="col">
-                    <div className="card h-100">
+                    <div className="card h-100 card-hover">
                          <img src={imgURL} className="card-img-top w-100" alt="..."/>
                          <div className="card-body">
                               <h5 className="card-title">{tour_name}</h5>
