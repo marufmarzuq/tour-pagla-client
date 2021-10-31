@@ -59,3 +59,9 @@
 .carousel-control-next, .carousel-control-prev {
     width: 12% !important;
 }
+.card-hover {
+    transition: .3s;
+}
+.card-hover:hover {
+    transform: translateY(-10px);
+}

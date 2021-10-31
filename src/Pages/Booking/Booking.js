@@ -60,7 +60,7 @@ const Booking = () => {
                                    />
                               </div>
                          </div>
-                         <div className="col-md-4">
+                         <div className="col-md-4 mb-5">
                               <h2 className="mb-4">Book this package</h2>
                               <form onSubmit={handleSubmit(onSubmit)} className="booking-form">
                                    <input readOnly type="text" defaultValue={user.displayName} placeholder="name" {...register("name", {required: true, maxLength: 100})} />
@@ -88,6 +88,12 @@ const Booking = () => {
                                    <input className="booking-submit my-bg-color" type="submit" />
                               </form>
                          </div>
+                    </div>
+                    <div className="row my-3">
+                         <h2><i class="fas fa-map-signs my-color"></i> Tour Location</h2>
+                    </div>
+                    <div className="row tour-map my-3">
+                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1uQuODxyQ76qhnqbq0C6LWES_IctvKtDm" width="100%" height="570px"></iframe>
                     </div>
                </div>
           </main>

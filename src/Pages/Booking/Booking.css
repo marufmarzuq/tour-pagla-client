@@ -17,3 +17,11 @@
      background-color: rebeccapurple;
      color: white;
  }
+.tour-map iframe {
+    transform: translateY(-55px);
+}
+
+.tour-map {
+    pointer-events: none;
+    overflow: hidden;
+}
